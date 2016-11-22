@@ -1,6 +1,6 @@
 {
-  "name": "Park Ranger",
-  "version": "1.0.0",
+  "name": "ParkRanger",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
