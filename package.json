@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "postinstall": "webpack -p --config ./webpack.prod.config.js --progress",
     "start": "webpack-dev-server",
     "test": "mocha --compilers js:babel-register --recursive"
   },
