@@ -6,7 +6,6 @@
   "scripts": {
     "start": "webpack-dev-server",
     "prod": "NODE_ENV=production node server.js",
-    "postinstall": "webpack -p",
     "test": "mocha --compilers js:babel-register --recursive"
   },
   "author": {
