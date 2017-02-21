@@ -1,5 +1,5 @@
 // webpack less
-import './build/less/styles.less';
+// import './build/less/styles.less';
 
 import 'babel-polyfill';
 
