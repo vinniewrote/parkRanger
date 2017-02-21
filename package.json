@@ -1,15 +1,14 @@
 {
-  "name": "ParkRanger",
+  "name": "parkRangerAlpha",
   "version": "0.0.1",
-  "description": "",
+  "description": "parkRangerAlpha",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "prod": "NODE_ENV=production node server.js",
+    "start": "webpack-dev-server",
     "test": "mocha --compilers js:babel-register --recursive"
   },
   "author": {
-    "name": "leo8eleven",
+    "name": "vinniewrote",
     "url": "www.leo8eleven.com"
   },
   "devDependencies": {
@@ -21,7 +20,6 @@
     "babel-preset-react": "^6.5.0",
     "babel-register": "^6.9.0",
     "css-loader": "^0.23.1",
-    "express": "^4.14.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "isomorphic-fetch": "^2.2.1",
     "json-loader": "^0.5.4",
