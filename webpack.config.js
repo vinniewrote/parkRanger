@@ -1,7 +1,8 @@
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+// var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-	entry: "./index.js",
+  devtool: 'source-map',
+	entry: ["./index.js"],
 	output: {
 		filename: "dist/js/main.js"
 	},
@@ -16,18 +17,22 @@ module.exports = {
 				test: /\.json$/,
 				loader: 'json-loader'
 			},
-			{
-				test: /\.css$/,
-				loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
-			},
-			{
-				test: /\.less$/,
-				loader: ExtractTextPlugin.extract('style-loader', 'css-loader!less-loader')
-			}
+      { test: /\.scss?$/,
+        loader: 'style!css!sass',
+        include: path.join(__dirname, 'src', 'styles')
+      }
+			// {
+			// 	test: /\.css$/,
+			// 	loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
+			// },
+			// {
+			// 	test: /\.less$/,
+			// 	loader: ExtractTextPlugin.extract('style-loader', 'css-loader!less-loader')
+			// }
 		]
 	},
 	plugins: [
-		new ExtractTextPlugin('dist/css/styles.css')
+		// new ExtractTextPlugin('dist/css/styles.css')
 	],
 	devServer: {
 		inline: true,
