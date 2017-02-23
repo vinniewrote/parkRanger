@@ -21,7 +21,7 @@ import Details from './build/components/Details';
 import UserProfile from './build/components/UserProfile';
 // render app
 ReactDOM.render(
-	<Provider store={store}>
+  <Provider store={store}>
 			<Router history={history}>
 				<Route path='/' component={Layout}>
 					<IndexRoute component={Discover}></IndexRoute>
