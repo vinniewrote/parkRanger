@@ -35,7 +35,12 @@ module.exports = {
 		]
 	},
 	plugins: [
-		new ExtractTextPlugin('dist/css/styles.css')
+		new ExtractTextPlugin('dist/css/styles.css'),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    })
 	],
 	devServer: {
 		inline: true,
