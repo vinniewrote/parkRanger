@@ -1,4 +1,4 @@
-// var ExtractTextPlugin = require('extract-text-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path')
 const webpack = require('webpack')
 
@@ -19,22 +19,23 @@ module.exports = {
 				test: /\.json$/,
 				loader: 'json-loader'
 			},
-      { test: /\.scss?$/,
-        loader: 'style!css!sass',
-        include: path.join(__dirname, 'build', 'sass')
-      }
-			// {
-			// 	test: /\.css$/,
-			// 	loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
-			// },
-			// {
-			// 	test: /\.less$/,
-			// 	loader: ExtractTextPlugin.extract('style-loader', 'css-loader!less-loader')
-			// }
+      // {
+      //   test: /\.scss?$/,
+      //   loader: 'style!css!sass',
+      //   include: path.join(__dirname, 'build', 'sass')
+      // }
+			{
+				test: /\.css$/,
+				loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
+			},
+			{
+				test: /\.less$/,
+				loader: ExtractTextPlugin.extract('style-loader', 'css-loader!less-loader')
+			}
 		]
 	},
 	plugins: [
-		// new ExtractTextPlugin('dist/css/styles.css')
+		new ExtractTextPlugin('dist/css/styles.css')
 	],
 	devServer: {
 		inline: true,
